@@ -1,48 +1,81 @@
 /* General Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a; /* Dark background */
-    color: #f0f0f0; /* Light text */
-    line-height: 1.6;
+:root{
+    --bg:#06070a;
+    --panel:#0f1720;
+    --muted:#9aa3b2;
+    --text:#e6eef6;
+    --accent-1:linear-gradient(90deg,#3aa3ff,#7b6bff);
+    --radius:12px;
+    --container:1100px;
 }
 
-/* Header & Nav */
-header {
-    background-color: #2a2a2a;
-    padding: 20px;
-    text-align: center;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
 }
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-}
-.logo { font-size: 24px; font-weight: bold; }
-nav ul { list-style: none; display: flex; gap: 20px; }
-nav a { color: white; text-decoration: none; }
 
-.hero-text { padding: 100px 20px; }
-h1 { font-size: 3em; margin-bottom: 10px; }
+.container{width:90%;max-width:var(--container);margin:0 auto}
+
+/* Header */
+.site-header{border-bottom:1px solid rgba(255,255,255,0.03);backdrop-filter:blur(6px)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.brand{font-weight:700;letter-spacing:0.4px}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:20px;font-size:0.95rem}
+.main-nav a:hover{color:var(--text)}
+
+/* Hero */
+.hero{padding:64px 0}
+.hero-inner{display:grid;grid-template-columns:1fr 220px;gap:32px;align-items:center}
+.hero-text h1{font-size:2.4rem;margin:0 0 10px}
+.hero-text .tagline{color:var(--text);margin:0 0 8px;font-weight:500}
+.hero-text .meta{color:var(--muted);font-size:0.9rem;margin-top:6px}
+.hero-aside .accent-block{height:180px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius);display:flex;align-items:center;justify-content:center}
+.accent-line{width:6px;height:120px;border-radius:6px;background:var(--accent-1)}
 
 /* Sections */
-section {
-    padding: 50px 10%;
-    border-bottom: 1px solid #333;
+.section{padding:48px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.section-title{font-size:1.25rem;margin:0 0 18px}
+.lead{color:var(--muted);max-width:75ch}
+
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tag{background:rgba(255,255,255,0.02);color:var(--text);padding:8px 12px;border-radius:999px;font-size:0.9rem;border:1px solid rgba(255,255,255,0.03)}
+
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:12px}
+.card{background:var(--panel);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.card h3{margin:0 0 8px;font-size:1.05rem}
+.card-body{color:var(--muted);font-size:0.95rem;margin:0 0 12px}
+.card-meta{font-size:0.85rem;color:var(--muted)}
+
+/* Contact */
+.contact-links{display:flex;gap:12px;margin-top:12px}
+.link-btn{padding:8px 14px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);text-decoration:none}
+.link-btn:hover{border-image:var(--accent-1) 1;background:linear-gradient(90deg,rgba(58,163,255,0.06),rgba(123,107,255,0.04))}
+
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:20px 0;margin-top:32px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:0.9rem}
+.footer-nav a{color:var(--muted);margin-left:14px;text-decoration:none}
+
+/* Responsiveness */
+@media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr}
+    .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+    .main-nav{display:none}
+    .projects-grid{grid-template-columns:1fr}
+    .hero-text h1{font-size:1.6rem}
+    .header-inner{padding:14px 0}
 }
 
-/* Cards (for Articles) */
-.card {
-    background: #333;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 20px;
-}
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    color: #4da6ff;
-    text-decoration: none;
-    font-weight: bold;
-}
+/* Small utility */
+.muted{color:var(--muted)}

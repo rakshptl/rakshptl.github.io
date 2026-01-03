@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raksh Patel | Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Raksh Patel — Physics & Technology</title>
+    <meta name="description" content="Raksh Patel — Final Year BS Physics student at IIT Jodhpur. Interests: Quantum Computing, Data Analytics, Web Development.">
     <link rel="stylesheet" href="assest/css/style.css">
 </head>
 <body>
-
-    <header>
-        <nav>
-            <div class="logo">Raksh.</div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#articles">Articles</a></li>
-            </ul>
-        </nav>
-        <div class="hero-text">
-            <h1>Hi, I'm Raksh.</h1>
-            <p>Developer. Writer. Creator.</p>
-        </div>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Write a short paragraph here about your professional life and interests.</p>
-    </section>
-
-    <section id="articles">
-        <h2>Latest Articles</h2>
-        <div class="card-container">
-            <div class="card">
-                <h3>My Journey in Tech</h3>
-                <p>A brief summary of what this article is about...</p>
-                <a href="https://medium.com/@yourusername/article" target="_blank" class="btn">Read on Medium</a>
+    <div class="site">
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="brand">Raksh Patel</div>
+                <nav class="main-nav" aria-label="Primary">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Selected Works</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="gallery">
-        <h2>My Gallery</h2>
-        <div class="gallery-grid">
-            <p>Place your images here later.</p>
-        </div>
-    </section>
+        <main>
+            <section class="hero" id="home">
+                <div class="container hero-inner">
+                    <div class="hero-text">
+                        <h1>Raksh Patel</h1>
+                        <p class="tagline">Final-year BS Physics — specializing in Quantum Technology. I build simulations, analyze data, and craft web tools at the intersection of physics and software.</p>
+                        <p class="meta">IIT Jodhpur — Quantum Technology specialization • Interests: Quantum Computing, Data Analytics, Web Development</p>
+                    </div>
+                    <div class="hero-aside" aria-hidden="true">
+                        <div class="accent-block">
+                            <div class="accent-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <footer>
-        <p>&copy; 2024 Raksh Patel</p>
-    </footer>
+            <section class="section" id="about">
+                <div class="container">
+                    <h2 class="section-title">About</h2>
+                    <p class="lead">I am a final-year BS Physics student at IIT Jodhpur with a specialization in Quantum Technology. My work focuses on building numerical simulations for quantum systems, deriving insights from experimental and simulated datasets, and developing web interfaces to present technical results clearly and accessibly.</p>
+                </div>
+            </section>
 
+            <section class="section" id="skills">
+                <div class="container">
+                    <h2 class="section-title">Skills & Interests</h2>
+                    <div class="tags" role="list">
+                        <span class="tag">Python</span>
+                        <span class="tag">Quantum Computing</span>
+                        <span class="tag">Data Analysis</span>
+                        <span class="tag">NumPy / SciPy</span>
+                        <span class="tag">Jupyter</span>
+                        <span class="tag">Web Development (HTML/CSS/JS)</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Signal Processing</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="projects">
+                <div class="container">
+                    <h2 class="section-title">Selected Works</h2>
+                    <div class="projects-grid">
+                        <article class="card">
+                            <h3>Quantum Simulation Project</h3>
+                            <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                            <div class="card-meta">Role: Research & Development — Tools: Python, NumPy</div>
+                        </article>
+
+                        <article class="card">
+                            <h3>Data Analysis Study</h3>
+                            <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                            <div class="card-meta">Role: Lead Analyst — Tools: pandas, Matplotlib</div>
+                        </article>
+
+                        <article class="card">
+                            <h3>Interactive Web Tool</h3>
+                            <p class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                            <div class="card-meta">Role: Front-end Development — Tools: HTML, CSS, JavaScript</div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="contact">
+                <div class="container contact-inner">
+                    <h2 class="section-title">Contact</h2>
+                    <p>I'm open to research collaborations, internships, and speaking opportunities. You can reach me via the links below.</p>
+                    <div class="contact-links">
+                        <a class="link-btn" href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+                        <a class="link-btn" href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener">LinkedIn</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <p>&copy; 2026 Raksh Patel — All rights reserved.</p>
+                <nav class="footer-nav">
+                    <a href="#privacy">Privacy</a>
+                    <a href="#">Top</a>
+                </nav>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
